@@ -1,0 +1,143 @@
+{
+  "hero": [
+    {
+      "label": "Collection Hiver 2025/26",
+      "title": "Vernus Alpinus",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica.",
+      "ctaText": "Découvrir",
+      "ctaHref": "#",
+      "image": "/images/hero1.jpg"
+    },
+    {
+      "label": "Nouvelle Collection",
+      "title": "Ars Vivendi",
+      "subtitle": "Sophisticatio et materia technica in harmonia perfecta pro altis culminibus.",
+      "ctaText": "Explorer",
+      "ctaHref": "#",
+      "image": "/images/hero2.jpg"
+    },
+    {
+      "label": "Édition Limitée",
+      "title": "Elegantia Nocturna",
+      "subtitle": "Tunicae paetis ornatae et pallia cashmere reinterpretantur elegantiam.",
+      "ctaText": "Voir Plus",
+      "ctaHref": "#",
+      "image": "/images/hero3.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Décoration",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia alpina et sophisticatio.",
+      "count": 24,
+      "overlay": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
+      "image": "/images/coco-neige.jpg"
+    },
+    {
+      "name": "Haute Couture",
+      "description": "Tweed emblematicus, geminum C, niger et albus. Collectio cum codicibus domus ludit.",
+      "count": 32,
+      "overlay": "Tweed emblématique et matières nobles pour une élégance intemporelle.",
+      "image": "/images/haute-couture.jpg"
+    },
+    {
+      "name": "Accessoires",
+      "description": "Sacculus elegans, ornamentum aureum et calcei montani. Materiae pretiosae.",
+      "count": 18,
+      "overlay": "Accessoires luxueux et détails raffinés pour compléter votre tenue.",
+      "image": "/images/accessoires.jpg"
+    },
+    {
+      "name": "Cashmere",
+      "description": "Pallia cashmere mollissimum et tunicae paetis ornatae. Luxuria in frigore.",
+      "count": 16,
+      "overlay": "Cachemire précieux et laine merino pour un confort absolu.",
+      "image": "/images/cashmere.jpg"
+    },
+    {
+      "name": "Après-Ski",
+      "description": "Vestimenta quae sophisticationem cum functionalitate coniungunt.",
+      "count": 21,
+      "overlay": "Élégance du matin au soir avec nos pièces après-ski sophistiquées.",
+      "image": "/images/apres-ski.jpg"
+    }
+  ],
+  "boutique": {
+    "hero": {
+      "title": "Vernus Alpinus",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica, collectio hibernalis vestiarium sophistica proponit.",
+      "image": "/images/boutique-hero.jpg"
+    },
+    "sections": [
+      {
+        "reverse": false,
+        "mainImage": "/images/main-1.jpg",
+        "details": [
+          {
+            "label": "Détail I",
+            "name": "Chapka Agneau",
+            "image": "/images/detail-1a.jpg"
+          },
+          {
+            "label": "Détail II",
+            "name": "Moufles Laine",
+            "image": "/images/detail-1b.jpg"
+          },
+          {
+            "label": "Détail II",
+            "name": "Moufles Laine",
+            "image": "/images/detail-1b.jpg"
+          }
+        ]
+      },
+      {
+        "reverse": true,
+        "mainImage": "/images/main-2.jpg",
+        "details": [
+          {
+            "label": "Détail I",
+            "name": "Tunica Tweed",
+            "image": "/images/detail-2a.jpg"
+          },
+          {
+            "label": "Détail II",
+            "name": "Pallium Cashmere",
+            "image": "/images/detail-2b.jpg"
+          }
+        ]
+      },
+      {
+        "reverse": false,
+        "mainImage": "/images/main-3.jpg",
+        "details": [
+          {
+            "label": "Détail I",
+            "name": "Vestis Alpina",
+            "image": "/images/detail-3a.jpg"
+          },
+          {
+            "label": "Détail II",
+            "name": "Calcei Montani",
+            "image": "/images/detail-3b.jpg"
+          }
+        ]
+      }
+    ],
+    "textBlocks": [
+      {
+        "reverse": false,
+        "label": "Montium Fastigium",
+        "title": "Altae Culmina",
+        "text": "Tweed emblematicus, geminum C, niger et albus: collectio cum codicibus domus ludit super partes cogitatas pro altis culminibus. Sophisticatio et materia technica in harmonia perfecta.",
+        "image": "/images/section-1.jpg"
+      },
+      {
+        "reverse": true,
+        "label": "Post Ski",
+        "title": "Elegantia Nocturna",
+        "text": "Tunicae paetis ornatae et pallia cashmere reinterpretantur elegantiam a mane ad vesperum. Materiae nobilissimae et artificio supremo, luxuria in frigore.",
+        "image": "/images/section-2.jpg"
+      }
+    ]
+  }
+}
