@@ -1,0 +1,228 @@
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: #e8e3dc;
+  margin-top: 110px;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background: #d4cfc4 center/cover no-repeat;
+  border: 2px solid #a89f91;
+  transition: transform 0.2s ease-out;
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #2c2c2c;
+  max-width: 600px;
+  padding: 20px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+/* PRODUITS : layout + cartes détail */
+.product-scroll-section {
+  position: relative;
+  min-height: 200vh;
+  padding: 100px 40px;
+  width: 100%;
+}
+.product-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.product-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+  width: 100%;
+}
+.product-layout.reverse {
+  grid-template-columns: 1fr 2fr;
+}
+.main-product {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  width: 100%;
+}
+.main-product-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #d4cfc4 center/cover no-repeat;
+  border: 2px solid #a89f91;
+}
+
+.details-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+.detail-card {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.detail-card:hover {
+  transform: translateY(-8px);
+}
+.detail-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #d4cfc4 center/cover no-repeat;
+  border: 2px solid #a89f91;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wishlist-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  z-index: 10;
+}
+.wishlist-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+.wishlist-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #2c2c2c;
+  stroke-width: 1.5px;
+}
+
+.product-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b7d6b;
+  margin-bottom: 8px;
+}
+.product-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* BLOCS TEXTE */
+.section {
+  padding: 80px 20px;
+}
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.section-grid.reverse {
+  direction: rtl;
+}
+.section-grid.reverse > * {
+  direction: ltr;
+}
+.section-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #d4cfc4 center/cover no-repeat;
+  border: 2px solid #a89f91;
+  transition: transform 0.3s ease;
+}
+.section-image:hover {
+  transform: scale(1.02);
+}
+.section-content {
+  padding: 40px;
+}
+.section-label {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8b7d6b;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.section-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #5a5a5a;
+  font-weight: 300;
+}
+
+/* Media queries */
+@media (max-width: 968px) {
+  .hero {
+    height: 70vh;
+    margin-top: 80px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .main-product {
+    position: relative;
+    top: 0;
+  }
+  .product-scroll-section {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 50px 20px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}

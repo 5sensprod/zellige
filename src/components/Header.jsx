@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header({
   logo = "Maison Luxe",
   menu = [
     { label: "Collections", href: "#collections" },
-    { label: "Boutiques", href: "boutique.html" },
+    { label: "Boutiques", href: "/boutique" }, // route SPA
     { label: "Histoire", href: "#histoire" },
     { label: "Contact", href: "#contact" },
   ],
@@ -24,14 +25,18 @@ export default function Header({
   return (
     <header className="header" ref={ref}>
       <div className="nav-container">
-        <a href="index.html" className="logo">
+        <Link to="/" className="logo">
           {logo}
-        </a>
+        </Link>
         <nav>
           <ul className="nav-menu">
             {menu.map((item, i) => (
               <li key={i}>
-                <a href={item.href}>{item.label}</a>
+                {item.href.startsWith("/") ? (
+                  <Link to={item.href}>{item.label}</Link>
+                ) : (
+                  <a href={item.href}>{item.label}</a>
+                )}
               </li>
             ))}
           </ul>
