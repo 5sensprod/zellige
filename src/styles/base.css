@@ -1,110 +1,55 @@
-/* Reset + base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --font-main: "Helvetica Neue", Arial, sans-serif;
+  --color-bg: #f8f5f0;
+  --color-text: #2c2c2c;
+  --color-accent: #8b7d6b;
+  --color-border: #a89f91;
+  --color-dark: #2c2c2c;
+  --color-white: #fff;
+}
+
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #f8f5f0;
-  color: #2c2c2c;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Header commun */
-.header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 1000;
-  padding: 30px 60px;
-  transition: 0.4s;
-  pointer-events: none;
-}
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 20px 60px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  pointer-events: auto;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #2c2c2c;
-  transition: 0.4s;
-  pointer-events: auto;
-}
-.nav-menu {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-.nav-menu a {
-  color: #2c2c2c;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-.nav-menu a:hover {
-  opacity: 0.6;
-}
-
-/* Footer commun */
-.footer-cta {
-  text-align: center;
-  padding: 120px 40px;
-  background: #2c2c2c;
-  color: #fff;
-}
-.footer-cta-title {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-.footer-cta-text {
-  font-size: 1.1rem;
-  line-height: 1.9;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  font-weight: 300;
-  opacity: 0.9;
-}
-.cta-button {
-  display: inline-block;
-  padding: 18px 60px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.85rem;
-  transition: 0.3s;
-}
-.cta-button:hover {
-  background: #fff;
-  color: #2c2c2c;
-}
-
-/* Utilitaires */
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Bonus favoris actif (utilisé par Boutique aussi) */
-.wishlist-btn.active .wishlist-icon path {
-  fill: #e63946;
-  stroke: none;
+/* ---------- THEMING OVERRIDES (optionnels) ---------- */
+/* Thème sombre : activer avec document.documentElement.setAttribute('data-theme','dark') */
+:root[data-theme="dark"] {
+  --color-bg: #111214;
+  --color-text: #f4f4f5;
+  --color-dark: #f4f4f5;
+  --color-white: #0f0f10;
+  --color-accent: #bda58c;
+  --color-border: #5a5247;
+  --font-main: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* (ex.) variantes pour le hero (si tu veux affiner contrastes) */
+:root {
+  --hero-cta-border: var(--color-white);
+  --hero-cta-text: var(--color-white);
+  --hero-cta-text-hover: var(--color-dark);
+  --hero-title-size-desktop: 4.5rem;
+  --hero-title-size-md: 2.5rem;
+  --hero-title-size-sm: 1.8rem;
+}
+:root[data-theme="dark"] {
+  --hero-cta-border: var(--color-text);
+  --hero-cta-text: var(--color-text);
+  --hero-cta-text-hover: var(--color-white);
 }

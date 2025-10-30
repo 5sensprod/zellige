@@ -1,43 +1,8 @@
-/* HERO */
-.hero {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-  background: #e8e3dc;
-  margin-top: 110px;
-}
-.hero-image {
-  width: 100%;
-  height: 100%;
-  background: #d4cfc4 center/cover no-repeat;
-  border: 2px solid #a89f91;
-  transition: transform 0.2s ease-out;
-}
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #2c2c2c;
-  max-width: 600px;
-  padding: 20px;
-}
-.hero-title {
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.hero-subtitle {
-  font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.8;
-  letter-spacing: 1px;
+.hero-slider {
+  height: 90vh; /* sur Boutique : slider fixe */
 }
 
-/* PRODUITS : layout + cartes détail */
+/* PRODUITS */
 .product-scroll-section {
   position: relative;
   min-height: 200vh;
@@ -71,7 +36,6 @@
   background: #d4cfc4 center/cover no-repeat;
   border: 2px solid #a89f91;
 }
-
 .details-sidebar {
   display: flex;
   flex-direction: column;
@@ -95,7 +59,6 @@
   margin-bottom: 20px;
   position: relative;
 }
-
 .wishlist-btn {
   position: absolute;
   bottom: 15px;
@@ -123,7 +86,6 @@
   stroke: #2c2c2c;
   stroke-width: 1.5px;
 }
-
 .product-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -188,14 +150,10 @@
   font-weight: 300;
 }
 
-/* Media queries */
+/* Responsive Boutique */
 @media (max-width: 968px) {
-  .hero {
+  .hero-slider {
     height: 70vh;
-    margin-top: 80px;
-  }
-  .hero-title {
-    font-size: 2rem;
   }
   .product-layout {
     grid-template-columns: 1fr;
@@ -217,12 +175,8 @@
     font-size: 1.8rem;
   }
 }
-
 @media (max-width: 640px) {
   .section {
     padding: 50px 20px;
-  }
-  .hero-title {
-    font-size: 1.5rem;
   }
 }

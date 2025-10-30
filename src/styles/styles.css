@@ -1,0 +1,9 @@
+/* 1) Global / reset / layout / variables */
+@import "./base.css";
+
+/* 2) Composants réutilisables (HeroSlider, Categories, etc.) */
+@import "./components.css";
+
+/* 3) Pages (spécifiques, plus prioritaires) */
+@import "./home.css";
+@import "./boutique.css";
