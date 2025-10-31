@@ -35,59 +35,76 @@
   ],
   "categories": [
     {
-      "name": "Sacs tressés",
-      "description": "Tweed emblematicus, geminum C, niger et albus. Collectio cum codicibus domus ludit.",
+      "name": "Tressages & paniers",
+      "description": "La douceur des matières, l’élégance des détails",
       "count": 32,
-      "overlay": "Tweed emblématique et matières nobles pour une élégance intemporelle.",
-      "image": "/images/haute-couture.jpg"
+      "overlay": "Entre tradition et confort",
+      "image": "/images/chatgpt-image-31-oct.-2025-18_17_48.png"
     },
     {
       "name": "Objets de décoration",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia alpina et sophisticatio.",
+      "description": "L’art d’habiller son intérieur avec sens et simplicité.",
       "count": 24,
-      "overlay": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
-      "image": "/images/coco-neige.jpg"
+      "overlay": "La simplicité raffinée.",
+      "image": "/images/chatgpt-image-31-oct.-2025-04_47_05.png"
     },
     {
-      "name": "Textiles",
-      "description": "Sacculus elegans, ornamentum aureum et calcei montani. Materiae pretiosae.",
+      "name": "Textiles & TissagesTextiles",
+      "description": "La douceur des matières, l’élégance des détails.",
       "count": 18,
-      "overlay": "Accessoires luxueux et détails raffinés pour compléter votre tenue.",
-      "image": "/images/accessoires.jpg"
+      "overlay": "Entre tradition et confort",
+      "image": "/images/chatgpt-image-31-oct.-2025-18_48_22.png"
     },
     {
-      "name": "Accessoires",
-      "description": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
+      "name": "Céramiques & poteries",
+      "description": "La douceur des formes, la noblesse de la terre",
       "count": 12,
-      "overlay": "Explorer",
-      "image": "/images/81696552-e6a9-490a-8894-447d90da248d.png"
+      "overlay": "L’art de la terre et du feu",
+      "image": "/images/chatgpt-image-31-oct.-2025-18_37_31.png"
     }
   ],
   "productSections": [
     {
       "reverse": false,
-      "mainImage": "/images/chatgpt-image-31-oct.-2025-04_33_22.png",
+      "mainImage": "/images/comfyui_00348_.png",
       "details": [
         {
-          "label": "Détail I",
-          "name": "Chapka Agneau",
-          "image": "/images/chatgpt-image-31-oct.-2025-02_27_57.png"
+          "label": "Céramiques & poteries",
+          "name": "Atelier Idrissi",
+          "image": "/images/comfyui_00352_.png"
         },
         {
-          "label": "Détail II",
-          "name": "Moufles Laine",
-          "image": "/images/chatgpt-image-31-oct.-2025-04_47_05.png"
+          "label": "Tressages & paniers",
+          "name": "Maison Tazgha",
+          "image": "/images/comfyui_00349_.png"
+        },
+        {
+          "label": "Textiles & tissages traditionnels",
+          "name": "Tissage Beldi",
+          "image": "/images/comfyui_00356_.png"
+        },
+        {
+          "label": "Objets de décoration",
+          "name": "Dar Lkhoum",
+          "image": "/images/comfyui_00354_.png"
         }
       ]
     }
   ],
   "textBlocks": [
     {
-      "reverse": false,
+      "reverse": true,
       "label": "Entre tradition et élégance contemporaine",
       "title": "Authenticité",
       "text": "Née d'une passion pour les matières naturelles et les savoir-faire artisanaux, Zellige Boutique rend hommage à l'héritage marocain.\nChaque création est le fruit d'une rencontre entre artisans talentueux et une vision contemporaine du design.",
       "image": "/images/chatgpt-image-31-oct.-2025-16_07_12.png"
+    },
+    {
+      "reverse": false,
+      "label": "L’esprit Zellige Boutique",
+      "title": "Le sens du geste",
+      "text": "Chez Zellige Boutique, chaque création est le fruit d’un temps juste — celui du geste patient, du savoir transmis et du respect de la matière.\n\nNos artisans travaillent dans la continuité d’une tradition vivante, en harmonie avec leur environnement.\nChaque objet porte en lui la trace du travail manuel, de la précision et de la passion.",
+      "image": "/images/comfyui_00357_.png"
     }
   ],
   "boutique": {
@@ -99,22 +116,27 @@
     "sections": [
       {
         "reverse": false,
-        "mainImage": "/images/chatgpt-image-31-oct.-2025-04_33_22.png",
+        "mainImage": "/images/comfyui_00348_.png",
         "details": [
           {
-            "label": "Détail I",
-            "name": "Chapka Agneau",
-            "image": "/images/chatgpt-image-31-oct.-2025-02_27_57.png"
+            "label": "Céramiques & poteries",
+            "name": "Atelier Idrissi",
+            "image": "/images/comfyui_00352_.png"
           },
           {
-            "label": "Détail II",
-            "name": "Moufles Laine",
-            "image": "/images/chatgpt-image-31-oct.-2025-04_47_05.png"
+            "label": "Tressages & paniers",
+            "name": "Maison Tazgha",
+            "image": "/images/comfyui_00349_.png"
           },
           {
-            "label": "Détail II",
-            "name": "Moufles Laine",
-            "image": "/images/img3.jpg"
+            "label": "Textiles & tissages traditionnels",
+            "name": "Tissage Beldi",
+            "image": "/images/comfyui_00356_.png"
+          },
+          {
+            "label": "Objets de décoration",
+            "name": "Dar Lkhoum",
+            "image": "/images/comfyui_00354_.png"
           }
         ]
       },

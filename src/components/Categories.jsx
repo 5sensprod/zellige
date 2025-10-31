@@ -91,7 +91,7 @@ export default function Categories({ items = [] }) {
           Nos ambiances
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-[3px] md:tracking-[4px] uppercase text-foreground">
-          Explorez Les Univers
+          Explorez Les Collections
         </h2>
       </div>
 

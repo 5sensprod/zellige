@@ -5,8 +5,8 @@ import { Settings } from "lucide-react";
 export default function Header({
   logo = "Zellige",
   menu = [
-    { label: "Collections", href: "#collections" },
     { label: "Boutiques", href: "/boutique" },
+    { label: "Collections", href: "#collections" },
     { label: "Histoire", href: "#histoire" },
     { label: "Contact", href: "#contact" },
   ],
