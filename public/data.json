@@ -63,6 +63,33 @@
       "image": "/images/81696552-e6a9-490a-8894-447d90da248d.png"
     }
   ],
+  "productSections": [
+    {
+      "reverse": false,
+      "mainImage": "/images/chatgpt-image-31-oct.-2025-04_33_22.png",
+      "details": [
+        {
+          "label": "Détail I",
+          "name": "Chapka Agneau",
+          "image": "/images/chatgpt-image-31-oct.-2025-02_27_57.png"
+        },
+        {
+          "label": "Détail II",
+          "name": "Moufles Laine",
+          "image": "/images/chatgpt-image-31-oct.-2025-04_47_05.png"
+        }
+      ]
+    }
+  ],
+  "textBlocks": [
+    {
+      "reverse": false,
+      "label": "Entre tradition et élégance contemporaine",
+      "title": "Authenticité",
+      "text": "Née d'une passion pour les matières naturelles et les savoir-faire artisanaux, Zellige Boutique rend hommage à l'héritage marocain.\nChaque création est le fruit d'une rencontre entre artisans talentueux et une vision contemporaine du design.",
+      "image": "/images/chatgpt-image-31-oct.-2025-16_07_12.png"
+    }
+  ],
   "boutique": {
     "hero": {
       "title": "Vernus Alpinus",

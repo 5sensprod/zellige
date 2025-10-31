@@ -59,6 +59,47 @@ collections:
               - { label: "Overlay", name: "overlay", widget: "text", required: false }
               - { label: "Image", name: "image", widget: "image" }
 
+          # productSections (Home uniquement)
+          - label: "Sections Produits (Home)"
+            name: "productSections"
+            widget: "list"
+            summary: "Section {{#if fields.reverse}}(inversée){{/if}}"
+            required: false
+            fields:
+              - {
+                  label: "Inverser (mise en page)",
+                  name: "reverse",
+                  widget: "boolean",
+                  default: false,
+                }
+              - { label: "Image principale", name: "mainImage", widget: "image" }
+              - label: "Détails"
+                name: "details"
+                widget: "list"
+                summary: "{{fields.label}} — {{fields.name}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Nom", name: "name", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+
+          # textBlocks (Home uniquement)
+          - label: "Blocs Texte (Home)"
+            name: "textBlocks"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.title}} {{#if fields.reverse}}(inversé){{/if}}"
+            required: false
+            fields:
+              - {
+                  label: "Inverser (mise en page)",
+                  name: "reverse",
+                  widget: "boolean",
+                  default: false,
+                }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+
           # boutique: objet
           - label: "Boutique"
             name: "boutique"

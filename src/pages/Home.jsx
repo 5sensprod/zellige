@@ -2,9 +2,16 @@ import React, { useState, useEffect } from "react";
 import HeroSlider from "../components/HeroSlider.jsx";
 import Categories from "../components/Categories.jsx";
 import SectionTitle from "../components/SectionTitle.jsx";
+import ProductSection from "../components/ProductSection.jsx";
+import TextSection from "../components/TextSection.jsx";
 
 export default function Home() {
-  const [data, setData] = useState({ hero: [], categories: [] });
+  const [data, setData] = useState({
+    hero: [],
+    categories: [],
+    productSections: [],
+    textBlocks: [],
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,6 +24,8 @@ export default function Home() {
           setData({
             hero: json.hero || [],
             categories: json.categories || [],
+            productSections: json.productSections || [],
+            textBlocks: json.textBlocks || [],
           });
           setLoading(false);
         }
@@ -51,17 +60,28 @@ export default function Home() {
         height="100vh"
       />
 
-      <SectionTitle label="Nos valeurs" title="Tradition & modernité" />
+      <SectionTitle label="Nos valeurs" title="Tradition & modernité" className="bg-muted" />
+
+      {data.textBlocks.map((block, idx) => (
+        <TextSection key={idx} block={block} />
+      ))}
 
       <Categories items={data.categories} />
 
       <SectionTitle
         label="Nouvelle Collection"
-        title="Découvrez Nos Créations"
+        title="Découvrez Nos Créateurs"
         className="bg-muted"
       />
 
-      {/* Vous pouvez ajouter d'autres sections ici */}
+      {data.productSections.map((section, idx) => (
+        <ProductSection
+          key={idx}
+          reverse={section.reverse}
+          mainImage={section.mainImage}
+          details={section.details || []}
+        />
+      ))}
     </>
   );
 }
