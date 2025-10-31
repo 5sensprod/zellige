@@ -9,3 +9,6 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-store
 .vite
+
+/public/images
+

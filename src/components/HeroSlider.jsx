@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeroSlider({
   slides = [],
-  autoplay = true,
+  autoplay = false,
   interval = 5000,
   showDots = true,
   height = "100vh",

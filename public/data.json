@@ -1,12 +1,12 @@
 {
   "hero": [
     {
-      "label": "Collection Hiver 2025/26",
-      "title": "Vernus Alpinus",
-      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica.",
+      "label": "L'élégance de l'artisanat marocain",
+      "title": "Zellige Boutique",
+      "subtitle": " ",
       "ctaText": "Découvrir",
       "ctaHref": "#",
-      "image": "/images/hero1.jpg"
+      "image": "/images/im5.jpg"
     },
     {
       "label": "Nouvelle Collection",
@@ -27,46 +27,39 @@
   ],
   "categories": [
     {
-      "name": "Décoration",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia alpina et sophisticatio.",
-      "count": 24,
-      "overlay": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
-      "image": "/images/coco-neige.jpg"
-    },
-    {
-      "name": "Haute Couture",
+      "name": "Sacs tressés",
       "description": "Tweed emblematicus, geminum C, niger et albus. Collectio cum codicibus domus ludit.",
       "count": 32,
       "overlay": "Tweed emblématique et matières nobles pour une élégance intemporelle.",
       "image": "/images/haute-couture.jpg"
     },
     {
-      "name": "Accessoires",
+      "name": "Objets de décoration",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia alpina et sophisticatio.",
+      "count": 24,
+      "overlay": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
+      "image": "/images/coco-neige.jpg"
+    },
+    {
+      "name": "Textiles",
       "description": "Sacculus elegans, ornamentum aureum et calcei montani. Materiae pretiosae.",
       "count": 18,
       "overlay": "Accessoires luxueux et détails raffinés pour compléter votre tenue.",
       "image": "/images/accessoires.jpg"
     },
     {
-      "name": "Cashmere",
-      "description": "Pallia cashmere mollissimum et tunicae paetis ornatae. Luxuria in frigore.",
-      "count": 16,
-      "overlay": "Cachemire précieux et laine merino pour un confort absolu.",
-      "image": "/images/cashmere.jpg"
-    },
-    {
-      "name": "Après-Ski",
-      "description": "Vestimenta quae sophisticationem cum functionalitate coniungunt.",
-      "count": 21,
-      "overlay": "Élégance du matin au soir avec nos pièces après-ski sophistiquées.",
-      "image": "/images/apres-ski.jpg"
+      "name": "Accessoires",
+      "description": "Découvrez notre sélection de pièces iconiques pour affronter l'hiver avec style et élégance.",
+      "count": 12,
+      "overlay": "Explorer",
+      "image": "/images/81696552-e6a9-490a-8894-447d90da248d.png"
     }
   ],
   "boutique": {
     "hero": {
       "title": "Vernus Alpinus",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica, collectio hibernalis vestiarium sophistica proponit.",
-      "image": "/images/boutique-hero.jpg"
+      "image": "/images/9fa2d6f2-6cb0-4768-9c7b-70694becf763.png"
     },
     "sections": [
       {

@@ -5,21 +5,36 @@
   height: 100vh;
   overflow: hidden;
 }
+
 .hero-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
 .hero-slide.active {
   opacity: 1;
 }
+
+/* Léger voile sombre pour faire ressortir le texte */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
 .hero-slide-image {
   width: 100%;
   height: 100%;
-  background: #d4cfc4 center/cover no-repeat;
-  border: 2px solid var(--color-border);
+  background: top/cover no-repeat;
+  background-attachment: fixed; /* 👈 Parallaxe simple */
+  opacity: 1;
 }
+
+/* Contenu centré */
 .hero-slide-content {
   position: absolute;
   inset: 0;
@@ -27,53 +42,70 @@
   place-items: center;
   text-align: center;
   padding: 40px;
+  z-index: 2;
+  animation: fadeUp 1.2s ease-out both;
 }
+
+/* Texte élégant et lisible */
 .hero-label {
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  opacity: 0.9;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
+
 .hero-title {
-  font-size: 4.5rem;
-  font-weight: 300;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 5px;
   text-transform: uppercase;
   line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 .hero-sub {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+  color: #f9f9f9;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Bouton simple et classe */
 .hero-cta {
   display: inline-block;
-  padding: 18px 60px;
+  padding: 15px 45px;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 0.85rem;
-  transition: 0.3s;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
 }
+
 .hero-cta:hover {
   background: #fff;
-  color: var(--dark);
+  color: #222;
 }
+
+/* Points du slider */
 .slider-dots {
   position: absolute;
-  bottom: 50px;
+  bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 15px;
-  z-index: 20;
+  gap: 12px;
+  z-index: 3;
 }
+
 .slider-dot {
   width: 12px;
   height: 12px;
@@ -83,8 +115,21 @@
   cursor: pointer;
   transition: 0.3s;
 }
+
 .slider-dot.active {
   background: #fff;
+}
+
+/* Animation d’apparition */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* CATEGORIES (Home) */

@@ -58,7 +58,7 @@
   opacity: 0.6;
 }
 
-.hero-slider {
+/* .hero-slider {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -148,7 +148,7 @@
 }
 .slider-dot.active {
   background: #fff;
-}
+} */
 
 .categories-section {
   background: #fff;

@@ -1,0 +1,106 @@
+backend:
+  # choisis le backend adapté (Netlify = git-gateway, sinon github/gitlab/bitbucket)
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/images" # les fichiers seront commit dans le repo ici
+public_folder: "/images" # URL publiques utilisées dans ton JSON
+
+publish_mode: editorial_workflow # brouillons + revue (facultatif)
+
+site_url: "/"
+
+collections:
+  - name: "site"
+    label: "Données du site"
+    files:
+      - label: "Catalogue / data.json"
+        name: "catalogue"
+        file: "public/data.json"
+        format: "json"
+        fields:
+          # hero: tableau de slides
+          - label: "Hero (slides)"
+            name: "hero"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.title}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Sous-titre", name: "subtitle", widget: "text" }
+              - { label: "Texte CTA", name: "ctaText", widget: "string", required: false }
+              - { label: "Lien CTA", name: "ctaHref", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+
+          # categories: tableau d'objets
+          - label: "Catégories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}} ({{fields.count}})"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Quantité (count)",
+                  name: "count",
+                  widget: "number",
+                  value_type: "int",
+                  min: 0,
+                }
+              - { label: "Overlay", name: "overlay", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+
+          # boutique: objet
+          - label: "Boutique"
+            name: "boutique"
+            widget: "object"
+            fields:
+              # boutique.hero
+              - label: "Hero Boutique"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Sous-titre", name: "subtitle", widget: "text", required: false }
+                  - { label: "Image", name: "image", widget: "image" }
+
+              # boutique.sections
+              - label: "Sections (images + détails)"
+                name: "sections"
+                widget: "list"
+                summary: "Section {{#if fields.reverse}}(inversée){{/if}} — {{fields.mainImage}}"
+                fields:
+                  - {
+                      label: "Inverser (mise en page)",
+                      name: "reverse",
+                      widget: "boolean",
+                      default: false,
+                    }
+                  - { label: "Image principale", name: "mainImage", widget: "image" }
+                  - label: "Détails"
+                    name: "details"
+                    widget: "list"
+                    summary: "{{fields.label}} — {{fields.name}}"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Nom", name: "name", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image" }
+
+              # boutique.textBlocks
+              - label: "Blocs Texte"
+                name: "textBlocks"
+                widget: "list"
+                summary: "{{fields.label}} — {{fields.title}} {{#if fields.reverse}}(inversé){{/if}}"
+                fields:
+                  - {
+                      label: "Inverser (mise en page)",
+                      name: "reverse",
+                      widget: "boolean",
+                      default: false,
+                    }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Titre", name: "title", widget: "string" }
+                  - { label: "Texte", name: "text", widget: "text" }
+                  - { label: "Image", name: "image", widget: "image" }
