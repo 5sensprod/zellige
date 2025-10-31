@@ -157,6 +157,7 @@ export default function Boutique() {
           showDots={false} // pas de points
           height="90vh" // même hauteur que ta section boutique
           theme="dark" // texte sombre, cohérent avec Boutique
+          parallax="false"
         />
       </div>
 

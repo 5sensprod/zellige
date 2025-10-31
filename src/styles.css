@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .header {
   position: fixed;
   inset: 0 0 auto 0;

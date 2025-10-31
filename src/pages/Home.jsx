@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <HeroSlider slides={data.hero} />
+      <HeroSlider slides={data.hero} theme="light" height="90vh" />
       <Categories items={data.categories} />
     </>
   );

@@ -3,10 +3,10 @@
     {
       "label": "L'élégance de l'artisanat marocain",
       "title": "Zellige Boutique",
-      "subtitle": " ",
+      "subtitle": " Ajoutez une touche d’authenticité à votre intérieur avec des pièces uniques",
       "ctaText": "Découvrir",
       "ctaHref": "#",
-      "image": "/images/im5.jpg"
+      "image": "/images/im6.jpg"
     },
     {
       "label": "Nouvelle Collection",
@@ -59,27 +59,27 @@
     "hero": {
       "title": "Vernus Alpinus",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica, collectio hibernalis vestiarium sophistica proponit.",
-      "image": "/images/9fa2d6f2-6cb0-4768-9c7b-70694becf763.png"
+      "image": "/images/im1.png"
     },
     "sections": [
       {
         "reverse": false,
-        "mainImage": "/images/main-1.jpg",
+        "mainImage": "/images/chatgpt-image-31-oct.-2025-04_33_22.png",
         "details": [
           {
             "label": "Détail I",
             "name": "Chapka Agneau",
-            "image": "/images/detail-1a.jpg"
+            "image": "/images/chatgpt-image-31-oct.-2025-02_27_57.png"
           },
           {
             "label": "Détail II",
             "name": "Moufles Laine",
-            "image": "/images/detail-1b.jpg"
+            "image": "/images/chatgpt-image-31-oct.-2025-04_47_05.png"
           },
           {
             "label": "Détail II",
             "name": "Moufles Laine",
-            "image": "/images/detail-1b.jpg"
+            "image": "/images/img3.jpg"
           }
         ]
       },
