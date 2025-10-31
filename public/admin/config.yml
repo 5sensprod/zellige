@@ -32,7 +32,14 @@ collections:
               - { label: "Sous-titre", name: "subtitle", widget: "text" }
               - { label: "Texte CTA", name: "ctaText", widget: "string", required: false }
               - { label: "Lien CTA", name: "ctaHref", widget: "string", required: false }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - {
+                  label: "Utiliser dégradé (au lieu de l'image)",
+                  name: "useGradient",
+                  widget: "boolean",
+                  default: false,
+                  required: false,
+                }
 
           # categories: tableau d'objets
           - label: "Catégories"

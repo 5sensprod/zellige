@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== VARIABLES CSS (votre système HSL) ===== */
 @layer base {
   :root {
     --background: 40 24% 96%; /* #f8f5f0 */
@@ -51,28 +52,198 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
   }
 }
 
-@layer base {
-  .bg-background {
-    background-color: hsl(var(--background));
+/* ===== HEADER DYNAMIQUE ===== */
+@layer components {
+  .header {
+    @apply fixed inset-x-0 top-0 z-[1000] px-6 md:px-15 py-7.5 transition-all duration-400 pointer-events-none;
   }
-  .text-foreground {
-    color: hsl(var(--foreground));
+
+  .header.scrolled {
+    @apply bg-white/95 backdrop-blur-md py-5 shadow-[0_2px_20px_rgba(0,0,0,0.05)] pointer-events-auto;
   }
-  .bg-card {
-    background-color: hsl(var(--card));
+
+  .logo {
+    @apply text-xl font-light tracking-[4px] uppercase text-white transition-colors duration-400 pointer-events-auto no-underline hover:opacity-70;
   }
-  .text-card-foreground {
-    color: hsl(var(--card-foreground));
+
+  .header.scrolled .logo {
+    @apply text-foreground;
   }
-  .bg-muted {
-    background-color: hsl(var(--muted));
+
+  .nav-menu {
+    @apply flex gap-6 md:gap-10 opacity-0 -translate-y-5 transition-all duration-400 items-center;
+  }
+
+  .header.scrolled .nav-menu {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .nav-menu a {
+    @apply text-foreground text-sm tracking-[2px] uppercase font-light hover:opacity-60 transition-opacity;
+  }
+}
+
+/* ===== HERO SLIDER ANIMATIONS ===== */
+@layer components {
+  .hero-slide {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-1000;
+  }
+
+  .hero-slide.active {
+    @apply opacity-100;
+  }
+
+  .hero-slide-content {
+    animation: fadeUp 1.2s ease-out both;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CATEGORIES SCROLL (GSAP) ===== */
+@layer components {
+  .categories-scroll-container {
+    will-change: transform;
+  }
+}
+
+/* ===== FOOTER CTA ===== */
+@layer components {
+  .footer-cta {
+    @apply text-center py-20 md:py-30 px-6 md:px-10 bg-foreground text-background;
+  }
+
+  .footer-cta-title {
+    @apply text-2xl md:text-3xl font-light tracking-[3px] md:tracking-[4px] mb-6 md:mb-8 uppercase;
+  }
+
+  .footer-cta-text {
+    @apply text-base md:text-lg leading-relaxed max-w-[700px] mx-auto mb-10 md:mb-12 font-light opacity-90;
+  }
+
+  .cta-button {
+    @apply inline-block px-10 md:px-15 py-4 border-2 border-background text-background uppercase tracking-[2px] md:tracking-[3px] text-sm transition-all duration-300 hover:bg-background hover:text-foreground;
+  }
+}
+
+/* ===== BOUTIQUE (ProductSection + DetailCard) ===== */
+@layer components {
+  .product-scroll-section {
+    @apply py-16 md:py-24;
+  }
+
+  .product-layout {
+    @apply grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start max-w-7xl mx-auto px-6 md:px-12;
+  }
+
+  .product-layout.reverse {
+    @apply md:flex-row-reverse;
+  }
+
+  .main-product {
+    @apply md:sticky md:top-24;
+  }
+
+  .main-product-image {
+    @apply w-full aspect-[9/16] bg-muted bg-cover bg-center border-2 border-border;
+  }
+
+  .details-sidebar {
+    @apply space-y-8 md:space-y-12;
+  }
+
+  /* ⚠️ Retirer 'group' de @apply - utiliser classe inline */
+  .detail-card {
+    /* Pas de @apply group ici */
+  }
+
+  .detail-image {
+    @apply relative w-full aspect-square bg-muted bg-cover bg-center border border-border mb-4 overflow-hidden;
+  }
+
+  .wishlist-btn {
+    @apply absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 transition-all duration-300 hover:scale-110;
+  }
+
+  /* ✅ Utiliser sélecteur CSS standard pour group-hover */
+  .detail-card:hover .wishlist-btn {
+    @apply opacity-100;
+  }
+
+  .wishlist-btn.active {
+    @apply opacity-100;
+  }
+
+  .wishlist-icon {
+    @apply w-5 h-5 fill-none stroke-foreground stroke-2 transition-all;
+  }
+
+  .wishlist-btn.active .wishlist-icon {
+    @apply fill-red-500 stroke-red-500;
+  }
+
+  .product-label {
+    @apply text-xs tracking-[2px] uppercase text-secondary mb-2;
+  }
+
+  .product-name {
+    @apply text-xl md:text-2xl font-light tracking-[2px] uppercase text-foreground;
+  }
+}
+
+/* ===== TEXT SECTION (Boutique) ===== */
+@layer components {
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-grid {
+    @apply grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center;
+  }
+
+  .section-grid.reverse {
+    @apply md:flex-row-reverse;
+  }
+
+  .section-image {
+    @apply w-full aspect-[9/16] bg-muted bg-cover bg-center border-2 border-border;
+  }
+
+  .section-label {
+    @apply text-xs md:text-sm tracking-[3px] md:tracking-[4px] uppercase text-secondary mb-4 md:mb-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-[2px] md:tracking-[3px] uppercase mb-6 md:mb-8 text-foreground;
+  }
+
+  .section-text {
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground tracking-wide whitespace-pre-line;
+  }
+}
+
+/* ===== CONTAINER UTILITY ===== */
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-15;
   }
 }

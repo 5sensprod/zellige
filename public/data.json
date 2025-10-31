@@ -3,7 +3,7 @@
     {
       "label": "L'élégance de l'artisanat marocain",
       "title": "Zellige Boutique",
-      "subtitle": " Ajoutez une touche d’authenticité à votre intérieur avec des pièces uniques",
+      "subtitle": "Ajoutez une touche d'authenticité à votre intérieur avec des pièces uniques",
       "ctaText": "Découvrir",
       "ctaHref": "#",
       "image": "/images/im6.jpg"
@@ -14,7 +14,7 @@
       "subtitle": "Sophisticatio et materia technica in harmonia perfecta pro altis culminibus.",
       "ctaText": "Explorer",
       "ctaHref": "#",
-      "image": "/images/hero2.jpg"
+      "useGradient": true
     },
     {
       "label": "Édition Limitée",
@@ -22,7 +22,15 @@
       "subtitle": "Tunicae paetis ornatae et pallia cashmere reinterpretantur elegantiam.",
       "ctaText": "Voir Plus",
       "ctaHref": "#",
-      "image": "/images/hero3.jpg"
+      "useGradient": true
+    },
+    {
+      "label": "Collection Exclusive",
+      "title": "Tradition & Modernité",
+      "subtitle": "L'art du zellige revisité dans un style contemporain",
+      "ctaText": "Découvrir",
+      "ctaHref": "#",
+      "useGradient": true
     }
   ],
   "categories": [
@@ -119,10 +127,10 @@
     "textBlocks": [
       {
         "reverse": false,
-        "label": "Montium Fastigium",
-        "title": "Altae Culmina",
-        "text": "Tweed emblematicus, geminum C, niger et albus: collectio cum codicibus domus ludit super partes cogitatas pro altis culminibus. Sophisticatio et materia technica in harmonia perfecta.",
-        "image": "/images/section-1.jpg"
+        "label": "Entre tradition et élégance contemporaine",
+        "title": "Authenticité",
+        "text": "Née d’une passion pour les matières naturelles et les savoir-faire artisanaux, Zellige Boutique rend hommage à l’héritage marocain.\nChaque création est le fruit d’une rencontre entre artisans talentueux et une vision contemporaine du design.\nDerrière chaque objet, il y a une histoire : celle d’une main qui façonne, d’un savoir transmis, et d’un respect profond pour la nature et la beauté simple.\nNous croyons en un artisanat durable, humain et inspirant — un pont entre hier et demain.",
+        "image": "/images/chatgpt-image-31-oct.-2025-16_07_12.png"
       },
       {
         "reverse": true,
