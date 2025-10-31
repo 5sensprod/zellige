@@ -21,7 +21,9 @@ collections:
         file: "public/data.json"
         format: "json"
         fields:
-          # hero: tableau de slides
+          # ===========================================================
+          # HERO PRINCIPAL (page d’accueil)
+          # ===========================================================
           - label: "Hero (slides)"
             name: "hero"
             widget: "list"
@@ -41,7 +43,9 @@ collections:
                   required: false,
                 }
 
-          # categories: tableau d'objets
+          # ===========================================================
+          # CATÉGORIES
+          # ===========================================================
           - label: "Catégories"
             name: "categories"
             widget: "list"
@@ -59,7 +63,9 @@ collections:
               - { label: "Overlay", name: "overlay", widget: "text", required: false }
               - { label: "Image", name: "image", widget: "image" }
 
-          # productSections (Home uniquement)
+          # ===========================================================
+          # SECTIONS PRODUITS (HOME)
+          # ===========================================================
           - label: "Sections Produits (Home)"
             name: "productSections"
             widget: "list"
@@ -82,7 +88,9 @@ collections:
                   - { label: "Nom", name: "name", widget: "string" }
                   - { label: "Image", name: "image", widget: "image" }
 
-          # textBlocks (Home uniquement)
+          # ===========================================================
+          # BLOCS TEXTE (HOME)
+          # ===========================================================
           - label: "Blocs Texte (Home)"
             name: "textBlocks"
             widget: "list"
@@ -100,21 +108,34 @@ collections:
               - { label: "Texte", name: "text", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
 
-          # boutique: objet
+          # ===========================================================
+          # BOUTIQUE
+          # ===========================================================
           - label: "Boutique"
             name: "boutique"
             widget: "object"
             fields:
-              # boutique.hero
+              # -------------------------------------------------------
+              # HERO BOUTIQUE
+              # -------------------------------------------------------
               - label: "Hero Boutique"
                 name: "hero"
                 widget: "object"
                 fields:
                   - { label: "Titre", name: "title", widget: "string" }
                   - { label: "Sous-titre", name: "subtitle", widget: "text", required: false }
-                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+                  - {
+                      label: "Utiliser dégradé (au lieu de l'image)",
+                      name: "useGradient",
+                      widget: "boolean",
+                      default: false,
+                      required: false,
+                    }
 
-              # boutique.sections
+              # -------------------------------------------------------
+              # SECTIONS BOUTIQUE
+              # -------------------------------------------------------
               - label: "Sections (images + détails)"
                 name: "sections"
                 widget: "list"
@@ -136,7 +157,9 @@ collections:
                       - { label: "Nom", name: "name", widget: "string" }
                       - { label: "Image", name: "image", widget: "image" }
 
-              # boutique.textBlocks
+              # -------------------------------------------------------
+              # BLOCS TEXTE BOUTIQUE
+              # -------------------------------------------------------
               - label: "Blocs Texte"
                 name: "textBlocks"
                 widget: "list"

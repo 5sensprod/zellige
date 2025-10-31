@@ -111,7 +111,8 @@
     "hero": {
       "title": "Vernus Alpinus",
       "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elegantia et materia technica, collectio hibernalis vestiarium sophistica proponit.",
-      "image": "/images/im1.png"
+      "image": "/images/im1.png",
+      "useGradient": true
     },
     "sections": [
       {

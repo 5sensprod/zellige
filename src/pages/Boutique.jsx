@@ -33,6 +33,7 @@ export default function Boutique() {
           title: boutique.hero.title,
           subtitle: boutique.hero.subtitle,
           image: boutique.hero.image,
+          useGradient: !!boutique.hero.useGradient, // ✅ ajout support dégradé
         },
       ]
     : [];
@@ -40,9 +41,9 @@ export default function Boutique() {
   return (
     <>
       {/* Hero */}
-      <div className="container">
-        <HeroSlider slides={heroSlide} autoplay={false} showDots={false} height="90vh" />
-      </div>
+      {/* <div className="container"> */}
+      <HeroSlider slides={heroSlide} autoplay={false} showDots={false} height="90vh" />
+      {/* </div> */}
 
       {/* Sections + TextBlocks alternés */}
       {(boutique.sections || []).map((sec, idx) => (

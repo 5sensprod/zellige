@@ -54,7 +54,7 @@ export default function Home() {
     <>
       <HeroSlider
         slides={data.hero}
-        autoplay={true}
+        autoplay={false}
         interval={5000}
         showDots={true}
         height="100vh"
